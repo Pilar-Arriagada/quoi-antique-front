@@ -1,0 +1,25 @@
+{
+  "name": "quai-antique-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+    "scripts": {
+  "sass": "sass --watch scss/main.scss css/main.css"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pilar-Arriagada/quai-antique-front.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Pilar-Arriagada/quai-antique-front/issues"
+  },
+  "homepage": "https://github.com/Pilar-Arriagada/quai-antique-front#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "sass": "^1.102.0"
+  }
+}
