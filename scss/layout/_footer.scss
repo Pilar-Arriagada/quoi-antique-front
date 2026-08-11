@@ -1,17 +1,20 @@
 @use "../abstracts/variables" as qa;
 
 .footer {
+    flex-shrink: 0;
+
     .footer-title {
+        margin-bottom: 0.25rem;
         font-family: qa.$font-title;
+        font-size: 1.125rem;
         font-weight: 500;
+        line-height: 1.2;
     }
 
-    .footer-link {
-        color: qa.$color-white;
-
-        &:hover,
-        &:focus-visible {
-            color: qa.$color-white;
-        }
+    p,
+    address {
+        margin-bottom: 0;
+        font-size: 1rem;
+        line-height: 1.25;
     }
 }

@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as qa;
+
+.gallery-section {
+    h1 {
+        color: qa.$color-primary;
+        margin-bottom: 1rem;
+    }
+
+    img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+    }
+}

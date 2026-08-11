@@ -1,0 +1,86 @@
+@use "../abstracts/variables" as qa;
+
+.hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("/images/hero-restaurant.jpg") center / cover no-repeat;
+
+    .hero-content {
+        width: 100%;
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        color: qa.$color-white;
+    }
+
+    h1 {
+        margin-bottom: 1rem;
+        font-family: qa.$font-title;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.15;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.625rem 1rem;
+    }
+}
+
+/* Sections de la page d'accueil */
+.home-section {
+    h2 {
+        margin-bottom: 1rem;
+        color: qa.$color-primary;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.booking-section {
+    background-color: qa.$color-secondary;
+
+    h2 {
+        margin-bottom: 1rem;
+        color: qa.$color-dark;
+    }
+
+    p {
+        max-width: 600px;
+        margin: 0 auto 1.5rem;
+        line-height: 1.6;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero {
+        min-height: 520px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 2.75rem;
+    }
+}

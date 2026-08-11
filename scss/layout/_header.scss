@@ -2,6 +2,7 @@
 
 .navbar {
     padding-block: 0.75rem;
+    min-height: 72px;
 
     .navbar-brand {
         font-family: qa.$font-title;
@@ -21,5 +22,10 @@
 
     .navbar-toggler {
         border-color: qa.$color-secondary;
+    }
+
+    .navbar-toggler {
+        min-width: 44px;
+        min-height: 44px;
     }
 }
