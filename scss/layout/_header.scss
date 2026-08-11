@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as qa;
+
+.navbar {
+    padding-block: 0.75rem;
+
+    .navbar-brand {
+        font-family: qa.$font-title;
+        font-weight: 600;
+        color: qa.$color-white;
+    }
+
+    .nav-link {
+        color: qa.$color-white;
+        font-weight: 500;
+
+        &:hover,
+        &:focus-visible {
+            color: qa.$color-secondary;
+        }
+    }
+
+    .navbar-toggler {
+        border-color: qa.$color-secondary;
+    }
+}

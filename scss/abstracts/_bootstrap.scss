@@ -1,2 +1,16 @@
+@use "variables" as qa;
+
+// Personnalisation Bootstrap avec la charte Quai Antique
+$primary: qa.$color-primary;
+$secondary: qa.$color-secondary;
+$dark: qa.$color-bg-dark;
+
+$body-color: qa.$color-dark;
+$link-color: qa.$color-primary;
+
+$font-family-sans-serif: qa.$font-text;
+$headings-font-family: qa.$font-title;
+
+// Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 

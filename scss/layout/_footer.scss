@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as qa;
+
+.footer {
+    .footer-title {
+        font-family: qa.$font-title;
+        font-weight: 500;
+    }
+
+    .footer-link {
+        color: qa.$color-white;
+
+        &:hover,
+        &:focus-visible {
+            color: qa.$color-white;
+        }
+    }
+}
