@@ -1,9 +1,11 @@
 import Route from "./Route.js";
 
-// Définir ici vos routes
+// Définir ici mes routes
 export const allRoutes = [
     new Route("/", "Accueil", "/pages/home.html"),
     new Route("/galerie", "Galerie", "/pages/galerie.html"),
+    new Route("/signin", "Connexion", "/pages/signin.html"),
+    new Route("/signup","Inscription", "/pages/signup.html"),
 ];
 
 // Le titre s'affiche comme ceci : Route.titre - websiteName
