@@ -6,9 +6,44 @@
         margin-bottom: 1rem;
     }
 
-    img {
-        width: 100%;
-        height: 260px;
-        object-fit: cover;
+    .image-card {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+    }
+
+    .image-title {
+        margin: 0.5rem 0;
+        font-weight: 500;
+    }
+
+    .image-actions {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    // Sur ordinateur : actions affichées au survol ou au clavier
+    @media (hover: hover) and (pointer: fine) {
+        .image-card {
+            overflow: hidden;
+
+            .image-title,
+            .image-actions {
+                opacity: 0;
+                transition: opacity 0.25s ease;
+            }
+
+            &:hover,
+            &:focus-within {
+                .image-title,
+                .image-actions {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

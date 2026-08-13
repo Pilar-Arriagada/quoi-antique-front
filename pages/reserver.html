@@ -1,0 +1,166 @@
+<section class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+
+            <h1 class="text-center mb-4">
+                Ma réservation
+            </h1>
+
+            <form id="reservationForm">
+
+                <div class="mb-3">
+                    <label for="reservationLastNameInput" class="form-label">
+                        Nom
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="reservationLastNameInput"
+                        name="lastName"
+                        disabled
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="reservationFirstNameInput" class="form-label">
+                        Prénom
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="reservationFirstNameInput"
+                        name="firstName"
+                        disabled
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="reservationAllergiesInput" class="form-label">
+                        Allergies
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="reservationAllergiesInput"
+                        name="allergies"
+                        placeholder="Ex. arachides, fruits de mer"
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="reservationGuestCountInput" class="form-label">
+                        Nombre de convives
+                    </label>
+
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="reservationGuestCountInput"
+                        name="guestCount"
+                        min="1"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="reservationDateInput" class="form-label">
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        class="form-control"
+                        id="reservationDateInput"
+                        name="date"
+                        required
+                    >
+                </div>
+
+                <fieldset class="mb-3">
+                    <legend class="form-label">
+                        Service
+                    </legend>
+
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="service"
+                            id="lunchServiceRadio"
+                            value="midi"
+                        >
+
+                        <label
+                            class="form-check-label"
+                            for="lunchServiceRadio"
+                        >
+                            Midi
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="service"
+                            id="dinnerServiceRadio"
+                            value="soir"
+                            checked
+                        >
+
+                        <label
+                            class="form-check-label"
+                            for="dinnerServiceRadio"
+                        >
+                            Soir
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="mb-4">
+                    <label for="reservationHourSelect" class="form-label">
+                        Heure
+                    </label>
+
+                    <select
+                        class="form-select"
+                        id="reservationHourSelect"
+                        name="hour"
+                        required
+                    >
+                        <option value="">Choisissez une heure</option>
+                        <option value="19:30">19:30</option>
+                        <option value="19:45">19:45</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:15">20:15</option>
+                        <option value="20:30">20:30</option>
+                        <option value="20:45">20:45</option>
+                        <option value="21:00">21:00</option>
+                    </select>
+                </div>
+
+                <div class="d-flex justify-content-center gap-2">
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Réserver
+                    </button>
+
+                    <a
+                        href="/reservations"
+                        class="btn btn-danger"
+                        onclick="route(event)"
+                    >
+                        Annuler
+                    </a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</section>

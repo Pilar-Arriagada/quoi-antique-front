@@ -1,0 +1,79 @@
+<section class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <h1 class="text-center mb-4">Mon compte</h1>
+
+            <form id="accountForm">
+                <div class="mb-3">
+                    <label for="accountLastNameInput" class="form-label">
+                        Nom
+                    </label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="accountLastNameInput"
+                        name="lastName"
+                        autocomplete="family-name"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="accountFirstNameInput" class="form-label">
+                        Prénom
+                    </label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="accountFirstNameInput"
+                        name="firstName"
+                        autocomplete="given-name"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="allergiesInput" class="form-label">
+                        Allergies
+                    </label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="allergiesInput"
+                        name="allergies"
+                        placeholder="Ex. arachides, fruits de mer"
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="guestCountInput" class="form-label">
+                        Nombre habituel de convives
+                    </label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="guestCountInput"
+                        name="guestCount"
+                        min="1"
+                    >
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-2">
+                    <button type="submit" class="btn btn-primary">
+                        Modifier mes informations
+                    </button>
+
+                    <button type="button" class="btn btn-danger">
+                        Supprimer mon compte
+                    </button>
+                </div>
+            </form>
+
+            <p class="text-center mt-3">
+                <a href="/editPassword" onclick="route(event)">
+                    Modifier mon mot de passe
+                </a>
+            </p>
+        </div>
+    </div>
+</section>

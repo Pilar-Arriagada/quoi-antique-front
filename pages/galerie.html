@@ -1,6 +1,7 @@
 <section class="gallery-section py-5">
     <div class="container">
 
+        <!-- En-tête de la galerie -->
         <div class="text-center mb-5">
             <h1>Galerie</h1>
             <p>
@@ -9,57 +10,349 @@
             </p>
         </div>
 
+        <!-- Ajouter une photo -->
+        <div class="text-center mb-4">
+            <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#editionPhotoModal"
+            >
+                Ajouter une photo
+            </button>
+        </div>
+
+        <!-- Galerie -->
         <div class="row g-4">
 
             <div class="col-12 col-sm-6 col-lg-4">
-                <img
-                    src="/images/restaurant.jpg"
-                    class="img-fluid rounded"
-                    alt="Salle du restaurant Quai Antique"
-                >
+                <div class="image-card">
+                    <img
+                        src="/images/restaurant.jpg"
+                        class="img-fluid rounded"
+                        alt="Salle du restaurant Quai Antique"
+                    >
+
+                    <p class="image-title">Salle du restaurant</p>
+
+                    <div class="image-actions">
+                        <button
+                            type="button"
+                            class="btn btn-light btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editionPhotoModal"
+                        >
+                            Modifier
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-danger btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deletePhotoModal"
+                        >
+                            Supprimer
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <div class="col-12 col-sm-6 col-lg-4">
-                <img
-                    src="/images/raclette.jpg"
-                    class="img-fluid rounded"
-                    alt="Raclette savoyarde"
-                >
+                <div class="image-card">
+                    <img
+                        src="/images/raclette.jpg"
+                        class="img-fluid rounded"
+                        alt="Raclette savoyarde"
+                    >
+
+                    <p class="image-title">Raclette savoyarde</p>
+
+                    <div class="image-actions">
+                        <button
+                            type="button"
+                            class="btn btn-light btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editionPhotoModal"
+                        >
+                            Modifier
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-danger btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deletePhotoModal"
+                        >
+                            Supprimer
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <div class="col-12 col-sm-6 col-lg-4">
-                <img
-                    src="/images/hero-restaurant.jpg"
-                    class="img-fluid rounded"
-                    alt="Ambiance chaleureuse du restaurant Quai Antique"
-                >
+                <div class="image-card">
+                    <img
+                        src="/images/hero-restaurant.jpg"
+                        class="img-fluid rounded"
+                        alt="Ambiance chaleureuse du restaurant Quai Antique"
+                    >
+
+                    <p class="image-title">Ambiance du restaurant</p>
+
+                    <div class="image-actions">
+                        <button
+                            type="button"
+                            class="btn btn-light btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editionPhotoModal"
+                        >
+                            Modifier
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-danger btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deletePhotoModal"
+                        >
+                            Supprimer
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <div class="col-12 col-sm-6 col-lg-4">
-    <img
-        src="/images/pain-fromage--miel-figues.jpg"
-        class="img-fluid rounded"
-        alt="Pain et fromage servis au Quai Antique"
-    >
-</div>
+                <div class="image-card">
+                    <img
+                        src="/images/pain-fromage--miel-figues.jpg"
+                        class="img-fluid rounded"
+                        alt="Pain et fromage servis au Quai Antique"
+                    >
 
-<div class="col-12 col-sm-6 col-lg-4">
-    <img
-        src="/images/vin-et-fromage.jpg"
-        class="img-fluid rounded"
-        alt="Vin et fromage de la cuisine savoyarde"
-    >
-</div>
+                    <p class="image-title">Pain, fromage et figues</p>
 
-<div class="col-12 col-sm-6 col-lg-4">
-    <img
-        src="/images/table-restaurant.jpg"
-        class="img-fluid rounded"
-        alt="Table dressée au restaurant Quai Antique"
-    >
-</div>
+                    <div class="image-actions">
+                        <button
+                            type="button"
+                            class="btn btn-light btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editionPhotoModal"
+                        >
+                            Modifier
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-danger btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deletePhotoModal"
+                        >
+                            Supprimer
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="image-card">
+                    <img
+                        src="/images/vin-et-fromage.jpg"
+                        class="img-fluid rounded"
+                        alt="Vin et fromage de la cuisine savoyarde"
+                    >
+
+                    <p class="image-title">Vin et fromage</p>
+
+                    <div class="image-actions">
+                        <button
+                            type="button"
+                            class="btn btn-light btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editionPhotoModal"
+                        >
+                            Modifier
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-danger btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deletePhotoModal"
+                        >
+                            Supprimer
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="image-card">
+                    <img
+                        src="/images/table-restaurant.jpg"
+                        class="img-fluid rounded"
+                        alt="Table dressée au restaurant Quai Antique"
+                    >
+
+                    <p class="image-title">Table du restaurant</p>
+
+                    <div class="image-actions">
+                        <button
+                            type="button"
+                            class="btn btn-light btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editionPhotoModal"
+                        >
+                            Modifier
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-danger btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deletePhotoModal"
+                        >
+                            Supprimer
+                        </button>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
+
+    <!-- Modale ajout / modification -->
+    <div
+        class="modal fade"
+        id="editionPhotoModal"
+        tabindex="-1"
+        aria-labelledby="editionPhotoModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2
+                        class="modal-title fs-5"
+                        id="editionPhotoModalLabel"
+                    >
+                        Ajouter ou modifier une photo
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Fermer"
+                    ></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="photoForm">
+
+                        <div class="mb-3">
+                            <label
+                                for="photoTitleInput"
+                                class="form-label"
+                            >
+                                Titre
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="photoTitleInput"
+                                name="title"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label
+                                for="photoInput"
+                                class="form-label"
+                            >
+                                Image
+                            </label>
+
+                            <input
+                                type="file"
+                                class="form-control"
+                                id="photoInput"
+                                name="image"
+                                accept="image/*"
+                            >
+                        </div>
+
+                        <div class="text-center">
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                Enregistrer
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale de confirmation de suppression -->
+    <div
+        class="modal fade"
+        id="deletePhotoModal"
+        tabindex="-1"
+        aria-labelledby="deletePhotoModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2
+                        class="modal-title fs-5"
+                        id="deletePhotoModalLabel"
+                    >
+                        Supprimer la photo
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Fermer"
+                    ></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>
+                        Voulez-vous vraiment supprimer cette photo ?
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                    >
+                        Annuler
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                    >
+                        Supprimer
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </section>
 
