@@ -1,120 +1,243 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
-    rel="stylesheet"
-    >
-    <link rel="stylesheet" href="/css/main.css">
-    <title>Projet Front: Quai Antique</title>
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="/css/main.css"
+    >
+
+    <title>Projet Front : Quai Antique</title>
 </head>
 
 <body>
+
     <!-- Header -->
-<header>
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" aria-label="Navigation principale">
-        <div class="container-fluid px-3 px-lg-5">
+    <header>
+        <nav
+            class="navbar navbar-expand-lg bg-dark"
+            data-bs-theme="dark"
+            aria-label="Navigation principale"
+        >
+            <div class="container-fluid px-3 px-lg-5">
 
-            <a class="navbar-brand" href="/" onclick="route(event)">
-                Quai Antique
-            </a>
+                <!-- Logo / Accueil -->
+                <a
+                    class="navbar-brand"
+                    href="/"
+                    onclick="route(event)"
+                >
+                    Quai Antique
+                </a>
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Ouvrir le menu de navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Menu mobile -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Ouvrir le menu de navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <!-- Navigation -->
+                <div
+                    class="collapse navbar-collapse"
+                    id="mainNavbar"
+                >
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/" onclick="route(event)">Accueil</a>
-                    </li>
+                        <!-- Accueil -->
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="/"
+                                onclick="route(event)"
+                            >
+                                Accueil
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/galerie" onclick="route(event)">Galerie</a>
-                    </li>
+                        <!-- Galerie -->
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="/galerie"
+                                onclick="route(event)"
+                            >
+                                Galerie
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">La carte</a>
-                    </li>
+                        <!-- Carte -->
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#"
+                            >
+                                La carte
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/reservations" onclick="route(event)">
-                            Les réservations
-                        </a>
-                    </li>
+                        <!-- Réservations : uniquement client connecté -->
+                        <li
+                            class="nav-item d-none"
+                            data-show="client"
+                        >
+                            <a
+                                class="nav-link"
+                                href="/reservations"
+                                onclick="route(event)"
+                            >
+                                Les réservations
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/account" onclick="route(event)">
-                            Mon compte
-                        </a>
-                    </li>
+                        <!-- Compte : utilisateur connecté -->
+                        <li
+                            class="nav-item d-none"
+                            data-show="connected"
+                        >
+                            <a
+                                class="nav-link"
+                                href="/account"
+                                onclick="route(event)"
+                            >
+                                Mon compte
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/signin" onclick="route(event)">
-                             Connexion
-                        </a>
-                    </li>
+                        <!-- Connexion : utilisateur déconnecté -->
+                        <li
+                            class="nav-item"
+                            data-show="disconnected"
+                        >
+                            <a
+                                class="nav-link"
+                                href="/signin"
+                                onclick="route(event)"
+                            >
+                                Connexion
+                            </a>
+                        </li>
 
-                </ul>
+                        <!-- Déconnexion : utilisateur connecté -->
+                        <li
+                            class="nav-item d-none"
+                            data-show="connected"
+                        >
+                            <button
+                                type="button"
+                                class="nav-link btn btn-link"
+                                id="signoutBtn"
+                            >
+                                Déconnexion
+                            </button>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Contenu dynamique -->
+    <main id="main-page">
+        Le contenu de la page sera injecté ici
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white">
+        <div class="container py-2">
+
+            <div class="row gy-2 gx-2 text-center align-items-start">
+
+                <!-- Horaires -->
+                <section class="col-12 col-sm-4">
+                    <h2 class="footer-title">
+                        Nos horaires
+                    </h2>
+
+                    <p>
+                        Du mardi au dimanche<br>
+                        12:00 - 14:00<br>
+                        18:00 - 23:00
+                    </p>
+                </section>
+
+                <!-- Adresse -->
+                <section class="col-6 col-sm-4">
+                    <h2 class="footer-title">
+                        Adresse
+                    </h2>
+
+                    <address>
+                        Quai Antique<br>
+                        5 rue de la route<br>
+                        31150 Ville
+                    </address>
+                </section>
+
+                <!-- Contact -->
+                <section class="col-6 col-sm-4">
+                    <h2 class="footer-title">
+                        Contact
+                    </h2>
+
+                    <p>
+                        +33 03 03 04 56
+                    </p>
+                </section>
+
             </div>
 
         </div>
-    </nav>
-</header>
+    </footer>
 
-    <!--main-->
 
-    <main id="main-page">Le contenu de la page sera injectée ici</main>
-
-    <!--Footer-->
-<footer class="footer bg-dark text-white">
-    <div class="container py-2">
-        <div class="row gy-2 gx-2 text-center align-items-start">
-
-            <section class="col-12 col-sm-4">
-                <h2 class="footer-title">Nos horaires</h2>
-                <p>
-                    Du mardi au dimanche<br>
-                    12:00 - 14:00<br>
-                    18:00 - 23:00
-                </p>
-            </section>
-
-            <section class="col-6 col-sm-4">
-                <h2 class="footer-title">Adresse</h2>
-                <address>
-                    Quai Antique<br>
-                    5 rue de la route<br>
-                    31150 Ville
-                </address>
-            </section>
-
-            <section class="col-6 col-sm-4">
-                <h2 class="footer-title">Contact</h2>
-                <p>+33 03 03 04 56</p>
-            </section>
-
-        </div>
-    </div>
-</footer>
-
-    
+    <!-- Bootstrap -->
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="Router/router.js"></script>
+
+    <!-- Authentification -->
+    <script src="/js/auth.js"></script>
+
+    <!-- Routeur -->
+    <script
+        type="module"
+        src="/Router/router.js"
+    ></script>
 
 </body>
+
 </html>
